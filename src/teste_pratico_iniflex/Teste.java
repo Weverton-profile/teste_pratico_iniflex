@@ -69,9 +69,8 @@ public class Teste {
 		System.out.println(maisVelho);
 		for (Funcionario funcionario : funcionarios) {
             if (funcionario.getDataNascimento().getYear() <= maisVelho.getDataNascimento().getYear()) {
-            	if (funcionario.getDataNascimento().getMonthValue() <= maisVelho.getDataNascimento().getMonthValue())
             		maisVelho = funcionario;
-            }
+            }  		
         }
 		Period diff = Period.between(maisVelho.getDataNascimento(), LocalDate.now());
 		System.out.println("Nome: " + maisVelho.getNome() + ", Idade: " + diff.getYears());
